@@ -149,7 +149,7 @@ class Atmospheric():
     Aerosol Optical Thickness.
     
     try:
-      MODIS Aerosol Product (monthly)
+      Aerosol Product (monthly)
     except:
       fill value
     """
@@ -169,7 +169,7 @@ class Atmospheric():
       """
       # image for this month
       img =  ee.Image(\
-                      ee.ImageCollection('MODIS/MOD08_M3_051')\
+                      ee.ImageCollection('MODIS/006/MOD08_M3')\
                         .filterDate(Atmospheric.round_month(date))\
                         .first()\
                      )
